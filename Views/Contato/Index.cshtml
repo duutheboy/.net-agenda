@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Contatos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de contatos</h1>
+
+    <br />
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a role="button" asp-controller="Contato" asp-action="Criar" class="btn btn-primary">Adicionar contato</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefone</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Eduardo Bezerra</td>
+                <td>teste@teste.com</td>
+                <td>99 9999-9999</td>
+                <td><a role="button" class="btn btn-success" asp-controller="Contato" asp-action="Editar">Editar</a> 
+                    <a role="button" asp-controller="Contato" asp-action="Excluir" class="btn btn-danger">Exlcuir</a></td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Eduardo Bezerra</td>
+                <td>teste@teste2.com</td>
+                <td>99 9999-9999</td>
+                <td><a role="button" class="btn btn-success" asp-controller="Contato" asp-action="Editar">Editar</a> 
+                    <a role="button" asp-controller="Contato" asp-action="Excluir" class="btn btn-danger">Exlcuir</a></td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Eduardo Bezerra</td>
+                <td>teste@teste2.com</td>
+                <td>99 9999-9999</td>
+                <td><a role="button" class="btn btn-success" asp-controller="Contato" asp-action="Editar">Editar</a> 
+                    <a role="button" asp-controller="Contato" asp-action="Excluir" class="btn btn-danger">Exlcuir</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
