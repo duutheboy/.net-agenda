@@ -23,5 +23,10 @@ namespace SiteEmMVC.Controllers
         {
             return View();
         }
+
+        public IActionResult ConfirmarExclusao()
+        {
+            return View();
+        }
     }
 }
