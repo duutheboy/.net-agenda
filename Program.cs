@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using SiteEmMVC.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<BancoContext>
+    (options => options.UseSqlServer
+    ("Server=localhost\\MSSQLSERVER01;Database=DB_SistemaContatos;Trusted_Connection=True;TrustServerCertificate=True")); 
+    // Corrigir erro "SSL PROVIDER error = 0" add parametro "TrustServerCertificate=True" na string de conexão
 
 var app = builder.Build();
 
