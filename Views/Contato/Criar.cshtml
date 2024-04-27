@@ -1,31 +1,37 @@
-﻿<div class="text-center">
+﻿@model ContatoModel;
+
+<div class="text-center">
 
     <h1 class="display-4">Cadastre o novo contato</h1>
 
     <br />
 
+<form asp-controller="Contato" asp-action="Criar" method="post">
+
     <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">Nome</span>
-        <input type="text" class="form-control" placeholder="Adicione o nome" aria-label="nome" aria-describedby="addon-wrapping">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Adicione o nome" aria-label="nome" aria-describedby="addon-wrapping">
     </div>
 
     <br />
 
     <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">Email</span>
-        <input type="email" class="form-control" placeholder="Adicione o email" aria-label="Email" aria-describedby="addon-wrapping">
+            <input type="email" asp-for="Email" class="form-control" placeholder="Adicione o email" aria-label="Email" aria-describedby="addon-wrapping">
     </div>
 
     <br />
 
     <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">Telefone</span>
-        <input type="number" class="form-control" placeholder="Adicione o telefone" aria-label="telefone" aria-describedby="addon-wrapping">
+            <input type="text" asp-for="Telefone" class="form-control" placeholder="Adicione o telefone" aria-label="telefone" aria-describedby="addon-wrapping">
     </div>
 
     <br />
 
     <button type="submit" role="button" class="btn btn-success">Adicionar</button>
     <a role="button" asp-controller="Contato" asp-action="Index" class="btn btn-secondary">Voltar</a>
+
+</form>
 
 </div>
