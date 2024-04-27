@@ -20,6 +20,6 @@ namespace SiteEmMVC.Models
 
         [Column("Telefone")]
         [Display(Name = "Telefone")]
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
     }
 }
